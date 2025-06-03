@@ -46,8 +46,8 @@ export default function About() {
                 <div className="text-sm text-muted-foreground">Projects Completed</div>
               </div>
               <div className="text-center p-4 bg-background rounded-lg border">
-                <div className="text-2xl font-bold text-primary">2</div>
-                <div className="text-sm text-muted-foreground">Years Experience</div>
+                <div className="text-2xl font-bold text-primary">1</div>
+                <div className="text-sm text-muted-foreground">Year Experience</div>
               </div>
             </div>
             
