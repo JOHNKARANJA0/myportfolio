@@ -35,7 +35,7 @@ export default function Footer() {
           
           <div className="border-t border-border pt-8">
             <p className="text-muted-foreground">
-              &copy; 2024 Mungai John Karanja. All rights reserved. Built with ❤️ using React and Tailwind CSS.
+              &copy; 2024 Mungai John Karanja. All rights reserved.
             </p>
           </div>
         </div>

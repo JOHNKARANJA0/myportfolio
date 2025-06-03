@@ -15,7 +15,7 @@ const education = [
     institution: "Machakos University (MKSU)",
     location: "Machakos, Kenya",
     period: "2019 - 2023",
-    grade: "Second Class Lower",
+    grade: "Second Class",
     major: "Statistics",
     description: "Comprehensive degree program combining mathematical foundations with computer science principles. Major in Statistics with coursework covering algorithms, data structures, database systems, and statistical analysis.",
     type: "Bachelor's Degree"

@@ -23,6 +23,11 @@ const skillCategories = [
     icon: Database,
     skills: ["PostgreSQL", "SQLite", "Git", "Docker"],
   },
+  {
+  title: "Deployment & Infrastructure",
+  icon: Server,
+  skills: ["Apache", "VirtualBox", "VMware", "Ubuntu Server", "Shell Scripting"],
+  },
 ];
 
 const additionalSkills = [

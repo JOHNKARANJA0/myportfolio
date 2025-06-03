@@ -130,7 +130,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="text-foreground font-medium">Location</div>
-                  <div className="text-muted-foreground">Kenya</div>
+                  <div className="text-muted-foreground">Nairobi, Kenya</div>
                 </div>
               </div>
             </div>

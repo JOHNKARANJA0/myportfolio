@@ -10,11 +10,15 @@ export default function About() {
         </div>
         
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="aspect-square bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center">
-              <div className="w-full h-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center">
-                <span className="text-6xl font-bold text-primary/40">MJK</span>
-              </div>
+            <div className="order-2 lg:order-1">
+              <div className="aspect-square bg-gradient-to-br from-primary/20 to-secondary/20 rounded-2xl flex items-center justify-center">
+                <div className="w-full h-full bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center overflow-hidden">
+                  <img
+                    src="/assets/MJK.jpeg"
+                    alt="MJK"
+                    className="object-cover w-full h-full rounded-2xl"
+                  />
+                </div>
             </div>
           </div>
           
