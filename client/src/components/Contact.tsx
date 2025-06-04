@@ -148,7 +148,7 @@ export default function Contact() {
               <h4 className="text-lg font-semibold text-foreground mb-4">Connect With Me</h4>
               <div className="flex space-x-4">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/JOHNKARANJA0"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
@@ -156,7 +156,7 @@ export default function Contact() {
                   <Github className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/john-mungai-karanja/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-muted rounded-lg flex items-center justify-center text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors duration-200"

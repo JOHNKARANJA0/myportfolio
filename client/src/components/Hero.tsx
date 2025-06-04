@@ -71,7 +71,7 @@ export default function Hero() {
           
           <div className="mt-12 flex justify-center space-x-6">
             <a
-              href="https://github.com"
+              href="https://github.com/JOHNKARANJA0/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
@@ -79,7 +79,7 @@ export default function Hero() {
               <Github className="w-8 h-8" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/john-mungai-karanja/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors duration-200"
