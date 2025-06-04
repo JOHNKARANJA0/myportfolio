@@ -4,7 +4,7 @@ import { ArrowRight, Download, ChevronDown, Github, Linkedin, Mail } from "lucid
 export default function Hero() {
   const downloadCV = () => {
     const link = document.createElement('a');
-    link.href = '@assets/Mungai John Karanja CV-1.pdf';
+    link.href = 'assets/Mungai John Karanja CV-1.pdf';
     link.download = 'Mungai_John_Karanja_CV.pdf';
     link.click();
   };
