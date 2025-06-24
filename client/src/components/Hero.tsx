@@ -12,7 +12,7 @@ export default function Hero() {
     "John",
     "Karanja",
     "Mungai",
-    "Developer",
+    "a Developer",
   ];
 
   useEffect(() => {
