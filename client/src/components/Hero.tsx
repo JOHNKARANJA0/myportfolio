@@ -1,7 +1,52 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Download, ChevronDown, Github, Linkedin, Mail } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export default function Hero() {
+    const [currentNameIndex, setCurrentNameIndex] = useState(0);
+  const [currentText, setCurrentText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const names: string[] = [
+    "John",
+    "Karanja",
+    "Mungai",
+    "Developer",
+  ];
+
+  useEffect(() => {
+    const currentName = names[currentNameIndex];
+    
+    const timeout = setTimeout(() => {
+      if (isPaused) {
+        setIsPaused(false);
+        setIsDeleting(true);
+        return;
+      }
+
+      if (!isDeleting) {
+        // Typing
+        if (currentText.length < currentName.length) {
+          setCurrentText(currentName.slice(0, currentText.length + 1));
+        } else {
+          // Finished typing, pause before deleting
+          setIsPaused(true);
+        }
+      } else {
+        // Deleting
+        if (currentText.length > 0) {
+          setCurrentText(currentName.slice(0, currentText.length - 1));
+        } else {
+          // Finished deleting, move to next name
+          setIsDeleting(false);
+          setCurrentNameIndex((prev) => (prev + 1) % names.length);
+        }
+      }
+    }, isPaused ? 2000 : isDeleting ? 50 : Math.random() * 100 + 100);
+
+    return () => clearTimeout(timeout);
+  }, [currentText, isDeleting, isPaused, currentNameIndex, names]);
   const downloadCV = () => {
     const link = document.createElement('a');
     link.href = 'assets/Mungai John Karanja CV-1.pdf';
@@ -34,7 +79,10 @@ export default function Hero() {
         <div className="animate-fade-in">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
             <span className="text-foreground">Hi, I'm </span>
-            <span className="text-primary">Mungai</span>
+            <span className="text-primary inline-block min-w-0">
+              {currentText}
+              <span className="inline-block w-1 h-12 md:h-16 lg:h-20 bg-primary ml-1 animate-blink"></span>
+            </span>
           </h1>
           
           <h2 className="text-xl md:text-2xl lg:text-3xl font-medium text-muted-foreground mb-8">
