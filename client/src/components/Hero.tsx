@@ -54,15 +54,20 @@ export default function Hero() {
     link.click();
   };
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId: string): void => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - offset;
-      
+      // Using scrollIntoView for better browser compatibility
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        inline: "nearest"
+      });
+    } else {
+      // Fallback: scroll to approximate position if element not found
+      console.warn(`Element with id "${sectionId}" not found`);
       window.scrollTo({
-        top: offsetPosition,
+        top: window.innerHeight,
         behavior: "smooth"
       });
     }
@@ -145,8 +150,20 @@ export default function Hero() {
       </div>
       
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
-        <ChevronDown className="w-6 h-6 text-muted-foreground" />
+      <div 
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow cursor-pointer hover:text-primary transition-colors duration-200"
+        onClick={() => scrollToSection("about")}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            scrollToSection("about");
+          }
+        }}
+        aria-label="Scroll to next section"
+      >
+        <ChevronDown className="w-6 h-6 text-muted-foreground hover:text-primary transition-colors duration-200" />
       </div>
     </section>
   );
