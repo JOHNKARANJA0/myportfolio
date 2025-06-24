@@ -19,17 +19,18 @@ const projects = [
     gradient: "from-green-500 to-blue-600"
   },
   {
-    title: "Apartment Management App",
-    description: "Comprehensive web application for managing apartment properties, tenants, and leases. Features secure authentication, robust property management, lease tracking, and responsive design for both desktop and mobile devices.",
-    technologies: ["Flask", "React", "SQLAlchemy", "Bcrypt"],
-    liveUrl: "https://apartmentmanagementapp.netlify.app/",
+    title: "ECD Data Management App",
+    description: "Developed a web-based application to digitize data tracking for Early Childhood Development (ECD) programs. The system enables field officers and program staff to collect, manage, and monitor beneficiary data efficiently, even in areas with limited or no internet connectivity. It features real-time dashboards, secure user access based on roles, and automatic data synchronization once online. The app is designed to improve accuracy, transparency, and efficiency in program monitoring and reporting.",
+    technologies: ["Flask", "Jinja", "Tailwind CSS", "PostgreSQL", "Progressive Web App (PWA)", "JavaScript", "HTML"]
+,
+    liveUrl: "https://lrdp.onrender.com",
     gradient: "from-indigo-500 to-purple-600"
   },
   {
-    title: "Task Management App",
-    description: "Collaborative web application developed to streamline task management. Features user authentication, task creation, assignment and progress tracking. Built with robust Flask API backend and responsive React frontend.",
-    technologies: ["Flask", "React", "SQLAlchemy", "Collaboration"],
-    liveUrl: "https://taskmanagerke.netlify.app/",
+    title: "Chama Management App",
+    description: "Built a full-stack web application for managing finances within Chama (social savings) groups. The system allows members to register, track both welfare and investment accounts, process bulk payments, manage loans, and apply penalties automatically or manually. It provides real-time financial reporting, secure logins, offline access via PWA features, and data export capabilities. Designed to be mobile-friendly and usable in areas with low or intermittent connectivity.",
+    technologies: ["Flask", "Jinja", "Tailwind CSS", "PostgreSQL", "Progressive Web App (PWA)", "JavaScript", "HTML", "REST API", "Formik", "Service Workers"],
+    liveUrl: "https://chamap.onrender.com",
     gradient: "from-pink-500 to-red-600"
   }
 ];
